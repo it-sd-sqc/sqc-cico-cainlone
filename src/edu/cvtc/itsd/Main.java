@@ -55,6 +55,9 @@ public class Main {
     {
       if (fb.getDocument() != null) {
         super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
+        if(fb.getDocument().getLength() >= MAX_LENGTH) {
+          super.replace(fb, MAX_LENGTH, fb.getDocument().getLength() - MAX_LENGTH, "", attr);
+        }
       }
       else {
         Toolkit.getDefaultToolkit().beep();
