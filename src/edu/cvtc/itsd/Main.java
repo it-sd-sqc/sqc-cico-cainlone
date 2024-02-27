@@ -292,6 +292,12 @@ public class Main {
     labelState.setForeground(Color.magenta);
     panelStatus.add(labelState);
 
+    JButton skipButton = new JButton("Close");
+    skipButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    skipButton.addActionListener(new Handler());
+    skipButton.setForeground(Color.green);
+    panelStatus.add(skipButton);
+
     panelStatus.add(Box.createVerticalGlue());
 
     // Error panel ////////////////////////////////////////////////////////////
