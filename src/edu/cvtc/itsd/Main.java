@@ -55,6 +55,9 @@ public class Main {
     {
       if (fb.getDocument() != null) {
         super.replace(fb, offset, lengthToDelete, stringToAdd, attr);
+        if(fb.getDocument().getLength() >= MAX_LENGTH) {
+          super.replace(fb, MAX_LENGTH, fb.getDocument().getLength() - MAX_LENGTH, "", attr);
+        }
       }
       else {
         Toolkit.getDefaultToolkit().beep();
@@ -288,6 +291,12 @@ public class Main {
     labelState.setAlignmentX(JComponent.CENTER_ALIGNMENT);
     labelState.setForeground(Color.magenta);
     panelStatus.add(labelState);
+
+    JButton skipButton = new JButton("Close");
+    skipButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    skipButton.addActionListener(new Handler());
+    skipButton.setForeground(Color.green);
+    panelStatus.add(skipButton);
 
     panelStatus.add(Box.createVerticalGlue());
 

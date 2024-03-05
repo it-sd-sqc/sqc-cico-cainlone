@@ -70,3 +70,13 @@ through pasting.
 
 ## Expected results
 * Should refuse to allow more than eight characters
+
+# Module 5: Timeout-Request
+
+## Test steps
+1. Build and run CiCo.
+2. Enter 00000000 into the field and click Update.
+3. Press the "Close" button before status panel times out.
+
+## Expected results
+* Should immediately go back to main panel
