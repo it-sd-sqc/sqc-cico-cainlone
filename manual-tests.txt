@@ -80,3 +80,18 @@ through pasting.
 
 ## Expected results
 * Should immediately go back to main panel
+
+
+##Module 6 Appearance Ticket 
+
+## Test Steps: 
+1 Build and run CiCo
+2 Enter Valid Card Number
+3 Press Enter
+4 Allow to timeout or clear using button
+5 Enter Invalid Card Number
+6 Press Enter
+7 Allow to Timeout or Clear
+
+## Expected Results: 
+* New color scheme should be reflected on all pages. 
